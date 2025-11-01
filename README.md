@@ -91,3 +91,43 @@ ollama pull llama3
 ```
 uvicorn app.main:app --reload
 ```
+## 🧪 Roadmap
+
+- [x] ✅ **Excel + Pandas + LLM agent**  
+  - Backend: FastAPI + Pandas, LLM integration via Ollama.
+  - Key file(s): `app/services/orchestrator.py`, `app/llm_agent/llm_agent.py`
+
+- [x] ✅ **CLI + API**  
+  - CLI runner: `cli_orchestrator.py`  
+  - API: `POST /upload/file`, `POST /query/run` (see `app/router.py`)
+
+- [ ] ⏳ **Streamlit UI dashboard** — *quick starter*
+  - File: `ui.py` (drop in repo root)
+  - Run: `streamlit run ui.py`
+
+```python
+# ui.py (Streamlit quick dashboard)
+import streamlit as st
+import requests
+import tempfile
+
+st.title("Excel-AI Engine — Demo UI")
+
+uploaded = st.file_uploader("Upload Excel (.xlsx)", type=["xlsx"])
+query = st.text_input("Ask a question about your data")
+
+if st.button("Upload & Run") and uploaded:
+    # save to data/
+    path = f"data/{uploaded.name}"
+    with open(path, "wb") as f:
+        f.write(uploaded.getbuffer())
+    st.success(f"Saved to {path}")
+
+    payload = {"file_path": path, "sheet_name": "Structured", "query": query}
+    resp = requests.post("http://localhost:8000/query/run", json=payload)
+    st.subheader("Result")
+    try:
+        st.json(resp.json())
+    except Exception:
+        st.write(resp.text)
+
