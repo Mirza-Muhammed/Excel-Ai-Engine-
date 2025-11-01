@@ -46,3 +46,20 @@ flowchart TD
     E --> F[Excel I/O]
     F --> G[Final Response]
 
+```
+##📁 Folder Structure
+excel-ai-engine/
+├── app/
+│   ├── main.py                # FastAPI entry point
+│   ├── router.py              # API routing
+│   ├── llm_agent/
+│   │   ├── __init__.py
+│   │   └── llm_agent.py       # LLM interface (Ollama / OpenAI / etc.)
+│   └── services/
+│       ├── orchestrator.py    # NL query → operation planner
+│       └── excel_processor.py # Pandas Excel operations
+├── data/                      # Generated Excel files stored here
+├── cli_orchestrator.py        # CLI mode for running natural queries
+└── README.md                  # Documentation
+
+
