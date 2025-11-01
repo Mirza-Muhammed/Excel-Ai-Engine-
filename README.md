@@ -1,12 +1,25 @@
-# Excel AI Engine
+# 📊 Excel-AI Engine — LLM Powered Excel Data Intelligence System
 
-Quickstart:
-1. Create venv and install: `pip install -r requirements.txt`
-2. Generate sample data: `python generate_data.py`
-3. Run: `uvicorn app.main:app --reload --port 8000`
-4. Open Swagger: http://localhost:8000/docs
+### ✨ Natural-Language Data Analysis | Excel Automation | AI-Driven Insights
 
-Endpoints:
-- POST /upload/file -> upload Excel
-- POST /upload/path -> use existing path
-- POST /query/run -> run natural-language query against a sheet
+> Upload any Excel file → Ask questions in English → Get SQL-like results, summaries, pivots, filters, joins & insights powered by LLMs.
+
+---
+
+## 🚀 Key Features
+
+| Capability | Details |
+|---|---|
+🧠 LLM-Powered Query Understanding | Convert natural language into structured data ops  
+📁 Excel File Upload | Works with any `.xlsx` file  
+📊 Structured Data Analysis | Filters, aggregations, joins, pivots, math ops  
+📅 Date Operations | Extract year/month/day, time diff  
+🗣️ Optional Text Intelligence | Summaries, sentiment (LLM-based)  
+🖧 REST APIs | `/upload`, `/query/run`  
+⚙️ Local AI | Works fully offline via **Ollama + LLaMA3**  
+💡 Auto Sample Excel Generator | 1000+ rows structured data  
+
+---
+
+## 🧠 System Architecture
+
