@@ -64,4 +64,30 @@ excel-ai-engine/
 ├── data/                      # Generated Excel files stored here
 ├── cli_orchestrator.py        # CLI mode for running natural queries
 └── README.md                  # Documentation
+## 🚀 Quick Start
+```
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/YOUR_USERNAME/excel-ai-engine.git
+cd excel-ai-engine
 
+```
+### 2️⃣ Create virtual environment
+```python -m venv venv
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
+```
+### 3️⃣ Install dependencies
+```
+pip install -r requirements.txt
+```
+### 4️⃣ Install & pull LLaMA3 model (Ollama)
+Download Ollama 👉 https://ollama.com/download
+Then pull the model:
+```
+ollama pull llama3
+```
+### 5️⃣ Run the server
+```
+uvicorn app.main:app --reload
+```
