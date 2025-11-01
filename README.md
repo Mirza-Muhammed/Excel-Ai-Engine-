@@ -48,6 +48,9 @@ flowchart TD
 
 ```
 ##📁 Folder Structure
+## 📁 Folder Structure
+
+```text
 excel-ai-engine/
 ├── app/
 │   ├── main.py                # FastAPI entry point
@@ -61,5 +64,4 @@ excel-ai-engine/
 ├── data/                      # Generated Excel files stored here
 ├── cli_orchestrator.py        # CLI mode for running natural queries
 └── README.md                  # Documentation
-
 
