@@ -17,7 +17,7 @@
 🗣️ Optional Text Intelligence | Summaries, sentiment (LLM-based)  
 🖧 REST APIs | `/upload`, `/query/run`  
 ⚙️ Local AI | Works fully offline via **Ollama + LLaMA3**  
-💡 Auto Sample Excel Generator | 1000+ rows structured data  
+💡 Auto Sample Excel Generator | 1000+ rows structured and unstructured data 
 
 ---
 
